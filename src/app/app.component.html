@@ -1,0 +1,40 @@
+
+<div class="container">
+    <h1>Book an Appointment</h1>
+    <hr>
+    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="lab" for="date">Date</label>
+        <input type="date" class="form-control"   id="date" formControlName="date" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Time</label>
+        <input type="time" class="form-control" id="time" formControlName="time" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" aria-label="First name" class="form-control"  id="name" formControlName="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="name@gmail.com" formControlName="email" required >
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" class="form-control"  id="phone" formControlName="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Service</label>
+        <select class="form-control" id="service" formControlName="service" required>
+          <option value="">Select a service</option>
+          <option value="haircut">Haircut</option>
+          <option value="manicure">Manicure</option>
+          <option value="massage">Massage</option>
+        </select>
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-primary">Book Appointment</button>
+    </form>
+  </div>
+
+  
